@@ -1,0 +1,13 @@
+{% extends 'carros/base.html' %}
+
+{% block title %}{{ carro.modelo }}{% endblock %}
+
+{% block content %}
+    <h2>{{ carro.marca }} {{ carro.modelo }}</h2>
+    <p>Placa: {{ carro.placa }}</p>
+    <p>Potência: {{ carro.potencia }}cv</p>
+    <p>Cilindrada: {{ carro.cilindrada }}cm3</p>
+    <p>Cor: {{ carro.cor }}</p>
+    <p>Passageiros: {{ carro.passageiros }}</p>
+    <p>Fabricação: {{ carro.fabricacao }}</p>
+{% endblock %}

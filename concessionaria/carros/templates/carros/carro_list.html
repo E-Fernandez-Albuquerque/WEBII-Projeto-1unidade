@@ -1,0 +1,23 @@
+{% extends 'carros/base.html' %}
+
+{% block title %}
+    Minha Concessionária
+{% endblock %}
+
+{% block content %}
+    {% for carro in carro_list %}
+        <article>
+            <h2>
+                <a href="{{ carro.get_absolute_url }}">
+                    {{ carro.modelo }}
+                </a>
+            </h2>
+            <p class="placa">
+                Placa: {{ carro.placa }}
+            </p>
+        </article>
+    {% endfor %}
+    <a id="add">
+        Adicionar veículo
+    </a>
+{% endblock %}
