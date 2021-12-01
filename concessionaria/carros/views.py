@@ -2,7 +2,7 @@ from django.views.generic import DetailView, ListView
 from .models import Carro
 from .forms import CarForm
 from django.http import request
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
@@ -22,3 +22,14 @@ def novoVeiculo(request):
     else:
         form = CarForm()
         return render(request, 'adicionar.html', {'form': form})
+
+@login_required
+def editarVeiculo(request, id):
+    edit = get_object_or_404(Carro, pk=id)
+    form = CarForm(instance=edit)
+
+    if(request.method == 'POST'):
+        return false
+         
+    else:
+        return render(request, 'atualizar.html',{'form': form, 'edit':edit})
