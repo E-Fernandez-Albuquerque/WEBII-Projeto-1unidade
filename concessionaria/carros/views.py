@@ -29,7 +29,13 @@ def editarVeiculo(request, id):
     form = CarForm(instance=edit)
 
     if(request.method == 'POST'):
-        return false
-         
+        form = CarForm(request.POST, instance=edit)
+
+        if form.is_valid():
+            edit.save()
+            return redirect('/')
+        else:
+            return render(request, 'atualizar.html',{'form': form, 'edit':edit})
+
     else:
         return render(request, 'atualizar.html',{'form': form, 'edit':edit})
