@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Novo registro{% endblock %}
+
+{% block content %}
+<div id="header">
+    <a style="cursor: pointer; padding: 0 30px" href="/concessionaria">Ver estoque</a>
+    <a style="cursor: pointer; padding: 0 30px; margin-left: 20px" href="/concessionaria/adicionar-registro">Adicionar
+        registro</a>
+    <a style="cursor: pointer; padding: 0 30px" href="/concessionaria">Atualizar registro</a>
+    <a style="cursor: pointer; padding: 0 30px" href="/concessionaria">Apagar registro</a>
+</div>
+
+<div id="form">
+    <h1>Registrar novo veículo</h1>
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Registrar">
+    </form>
+</div>
+{% endblock %}

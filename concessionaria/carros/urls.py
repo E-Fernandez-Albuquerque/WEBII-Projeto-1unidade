@@ -7,4 +7,5 @@ app_name = 'carros'
 urlpatterns = [
     path('', views.CarroListView.as_view(), name='list'),
     path("<slug:slug>/", views.CarroDetailView.as_view(), name='detail'),
+    path('manage/adicionar-registro/', views.novoVeiculo, name='adicionar')
 ]

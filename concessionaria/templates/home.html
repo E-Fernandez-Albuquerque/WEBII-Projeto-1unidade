@@ -3,8 +3,11 @@
 {% block title %}Teste{% endblock %}
 
 {% block content %}
+<div id="header">
     <a style="cursor: pointer; padding: 0 30px" href="/concessionaria">Ver estoque</a>
-    <a style="cursor: pointer; padding: 0 30px; margin-left: 20px" href="/adicionar-registro">Adicionar registro</a>
+    <a style="cursor: pointer; padding: 0 30px; margin-left: 20px"
+        href="/concessionaria/manage/adicionar-registro">Adicionar registro</a>
     <a style="cursor: pointer; padding: 0 30px; margin-left: 20px" href="">Atualizar registro</a>
     <a style="cursor: pointer; padding: 0 30px; margin-left: 20px" href="">Deletar registro</a>
+</div>
 {% endblock %}
