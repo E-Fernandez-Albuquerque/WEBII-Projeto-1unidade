@@ -3,7 +3,6 @@ body{
     align-items: center;
     flex-direction: column  ;
 }
-
 main{
     width: 40%;
     display: flex;
@@ -14,7 +13,7 @@ p{
     text-align: center;
     padding: 5px;
     background-color: #fafafa;
-    border: 1px solid #666;
+    border: 1px solid #666 !important;
     transition: all 0.4s ease;
 }
 
@@ -23,12 +22,8 @@ article{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid #ff6660;
-}
-
-h1{
-    font-family: cursive;
-    color: #ff6660;
+    border-bottom: 2px solid gray;
+    padding-bottom: 4px;
 }
 
 h2{
@@ -39,19 +34,19 @@ h2{
 
 a{
     text-align: center;
-    text-decoration: none;
-    color: #616161;
+    text-decoration: none !important;
+    color: #616161 !important;
     transition: all 0.4s ease;
     font-family: cursive;
 }
 
 a:visited{
-    text-decoration: none;
-    color: #616161;
+    text-decoration: none !important;
+    color: #616161 !important;
 }
 
 a:hover{
-    color: #ff6660;
+    color: gray !important;
 }
 
 #add{

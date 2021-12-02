@@ -1,22 +1,29 @@
 {% extends 'carros/base.html' %}
 
 {% block title %}
-    Minha Concessionária
+Minha Concessionária
 {% endblock %}
 
 {% block content %}
-    {% for carro in carro_list %}
-        <article>
-            <h2>
-                <a href="{{ carro.get_absolute_url }}">
-                    {{ carro.marca }} {{ carro.modelo }}
-                </a>
-            </h2>
-            <p class="placa">
-                Placa: {{ carro.placa }}
-            </p>
-            <a href="manage/atualizar-registro/{{ carro.id }}">Editar registro</a>
-        </article>
-        
-    {% endfor %}
+{% for carro in carro_list %}
+
+<article>
+    {% for message in messages %}
+    <div class="alert alert-primary" role="alert">
+        <span {% if message.tags %} class="alert alert={{message.tags}}" {% endif %}>{{message}}</span>
+    </div>
+    {%endfor%}
+    <h2>
+        <a href="{{ carro.get_absolute_url }}">
+            {{ carro.marca }} {{ carro.modelo }}
+        </a>
+    </h2>
+    <p class="placa">
+        Placa: {{ carro.placa }}
+    </p>
+    <a href="manage/atualizar-registro/{{ carro.id }}">Editar registro</a>
+    <a href="manage/deletar-registro/{{ carro.id }}">Deletar registro</a>
+</article>
+
+{% endfor %}
 {% endblock %}
