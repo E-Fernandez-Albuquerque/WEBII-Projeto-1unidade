@@ -5,14 +5,15 @@ Minha Concessionária
 {% endblock %}
 
 {% block content %}
+{% for message in messages %}
+<div class="alert alert-primary" role="alert">
+    <span {% if message.tags %} class="alert alert={{message.tags}}" {% endif %}>{{message}}</span>
+</div>
+{%endfor%}
 {% for carro in carro_list %}
 
 <article>
-    {% for message in messages %}
-    <div class="alert alert-primary" role="alert">
-        <span {% if message.tags %} class="alert alert={{message.tags}}" {% endif %}>{{message}}</span>
-    </div>
-    {%endfor%}
+
     <h2>
         <a href="{{ carro.get_absolute_url }}">
             {{ carro.marca }} {{ carro.modelo }}
