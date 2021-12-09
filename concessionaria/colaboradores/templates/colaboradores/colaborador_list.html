@@ -1,0 +1,27 @@
+{% extends 'carros/base.html' %}
+
+{% block title %}
+Colaboradores
+{% endblock %}
+
+{% block content %}
+{% for colaborador in colaborador_list %}
+
+<article>
+    {% for message in messages %}
+    <div class="alert alert-primary" role="alert">
+        <span {% if message.tags %} class="alert alert={{message.tags}}" {% endif %}>{{message}}</span>
+    </div>
+    {%endfor%}
+    <h2>
+        <a href="{{ colaborador.get_absolute_url }}">
+            {{ colaborador.nome }} {{ colaborador.sobrenome }}
+        </a>
+    </h2>
+    <a href="manage/atualizar-colaborador/{{ colaborador.id }}">Editar colaborador</a>
+    <a href='manage/deletar-colaborador/{{ colaborador.id }}'>Deletar colaborador</a>
+</article>
+
+{% endfor %}
+<a href="manage/adicionar-colaborador" style="color: #4533ff !important; font-size: 20px;">Adicionar novo colaborador</a>
+{% endblock %}

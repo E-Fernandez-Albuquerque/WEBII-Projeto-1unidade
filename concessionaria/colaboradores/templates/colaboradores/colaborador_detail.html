@@ -1,0 +1,10 @@
+{% extends 'carros/base.html' %}
+
+{% block title %}{{ carro.modelo }}{% endblock %}
+
+{% block content %}
+    <h2>{{ colaborador.nome }} {{ colaborador.sobrenome }}</h2>
+    <p>rg: {{ colaborador.rg }}</p>
+    <p>CPF: {{ colaborador.cpf }}</p>
+    <p>Cargo: {{ colaborador.cargo }}</p>
+{% endblock %}

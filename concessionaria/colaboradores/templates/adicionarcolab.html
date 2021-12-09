@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Novo registro{% endblock %}
+
+{% block content %}
+<div id="header">
+    <a style="cursor: pointer; padding: 0 30px" href="/colaboradores">Ver colaboradores</a>
+    <a style="cursor: pointer; padding: 0 30px; margin-left: 20px" href="/colaboradores/manage/adicionar-colaborador">Adicionar
+        colaborador</a>
+
+</div>
+
+<div id="form">
+    <h1>Registrar novo colaborador</h1>
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Registrar">
+    </form>
+</div>
+{% endblock %}

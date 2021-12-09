@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('concessionaria/', include('carros.urls', namespace='carros')),
     path('accounts/', include('allauth.urls')),
-    path('', include('pages.urls', namespace='pages'))
+    path('', include('pages.urls', namespace='pages')),
+    path('colaboradores/', include('colaboradores.urls', namespace='colaborador')),
 ]
