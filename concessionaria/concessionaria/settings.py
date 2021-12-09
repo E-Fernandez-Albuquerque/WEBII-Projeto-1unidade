@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'allauth.account', 
     'allauth.socialaccount', 
     'pages.apps.PagesConfig',
-    'colaboradores.apps.ColaboradoresConfig'
+    'colaboradores.apps.ColaboradoresConfig',
+    'clientes.apps.ClientesConfig',
+    'oficina.apps.OficinaConfig'
 ]
 
 MIDDLEWARE = [

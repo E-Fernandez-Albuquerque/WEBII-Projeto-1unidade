@@ -1,0 +1,9 @@
+{% extends 'clientes/base.html' %}
+
+{% block title %}{{ cliente.nome }}{% endblock %}
+
+{% block content %}
+    <h2>{{ cliente.nome }} {{ cliente.sobrenome }}</h2>
+    <p>rg: {{ cliente.rg }}</p>
+    <p>CPF: {{ cliente.cpf }}</p>
+{% endblock %}

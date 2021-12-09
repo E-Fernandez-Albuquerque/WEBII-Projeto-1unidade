@@ -1,0 +1,9 @@
+{% extends 'clientes/base.html' %}
+
+{% block title %}{{ atendimento.cliente }}{% endblock %}
+
+{% block content %}
+    <h2>{{ atendimento.cliente }} - {{ atendimento.data }}</h2>
+    <p>Reparo: {{ atendimento.reparo }}</p>
+    <p>Colaborador: {{ atendimento.colaborador }}</p>
+{% endblock %}

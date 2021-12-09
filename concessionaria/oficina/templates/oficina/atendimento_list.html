@@ -1,0 +1,27 @@
+{% extends 'clientes/base.html' %}
+
+{% block title %}
+Atendimentos
+{% endblock %}
+
+{% block content %}
+{% for atendimento in atendimento_list %}
+
+<article>
+    {% for message in messages %}
+    <div class="alert alert-primary" role="alert">
+        <span {% if message.tags %} class="alert alert={{message.tags}}" {% endif %}>{{message}}</span>
+    </div>
+    {%endfor%}
+    <h2>
+        <a href="{{ atendimento.get_absolute_url }}">
+            {{ atendimento.cliente }} - {{ atendimento.data }}
+        </a>
+    </h2>
+    <a href="manage/atualizar-atendimento/{{ atendimento.id }}">Editar atendimento</a>
+    <a href='manage/deletar-atendimento/{{ atendimento.id }}'>Deletar atendimento</a>
+</article>
+
+{% endfor %}
+<a href="manage/adicionar-atendimento" style="color: #4533ff !important; font-size: 20px;">Adicionar novo atendimento</a>
+{% endblock %}

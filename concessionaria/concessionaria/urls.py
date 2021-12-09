@@ -22,4 +22,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('pages.urls', namespace='pages')),
     path('colaboradores/', include('colaboradores.urls', namespace='colaborador')),
+    path('clientes/', include('clientes.urls', namespace='cliente')),
+    path('oficina/', include('oficina.urls', namespace='atendimento')),
 ]

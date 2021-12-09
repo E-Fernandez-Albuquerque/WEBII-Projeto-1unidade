@@ -1,0 +1,27 @@
+{% extends 'clientes/base.html' %}
+
+{% block title %}
+Clientes
+{% endblock %}
+
+{% block content %}
+{% for cliente in cliente_list %}
+
+<article>
+    {% for message in messages %}
+    <div class="alert alert-primary" role="alert">
+        <span {% if message.tags %} class="alert alert={{message.tags}}" {% endif %}>{{message}}</span>
+    </div>
+    {%endfor%}
+    <h2>
+        <a href="{{ cliente.get_absolute_url }}">
+            {{ cliente.nome }} {{ cliente.sobrenome }}
+        </a>
+    </h2>
+    <a href="manage/atualizar-cliente/{{ cliente.id }}">Editar cliente</a>
+    <a href='manage/deletar-cliente/{{ cliente.id }}'>Deletar cliente</a>
+</article>
+
+{% endfor %}
+<a href="manage/adicionar-cliente" style="color: #4533ff !important; font-size: 20px;">Adicionar novo cliente</a>
+{% endblock %}

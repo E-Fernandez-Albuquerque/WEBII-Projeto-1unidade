@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Atualizar registro{% endblock %}
+
+{% block content %}
+<div id="header">
+    <a style="cursor: pointer; padding: 0 30px" href="/clientes">Ver clientes</a>
+    <a style="cursor: pointer; padding: 0 30px; margin-left: 20px" href="/clientes/manage/adicionar-cliente">Adicionar
+        cliente</a>
+</div>
+
+<div id="form">
+    <h1>Atualizando cliente</h1>
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Atualizar">
+    </form>
+</div>
+{% endblock %}
