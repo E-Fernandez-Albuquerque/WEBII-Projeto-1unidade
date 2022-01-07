@@ -149,7 +149,6 @@ LOGIN_REDIRECT_URL = '/'
 
 
 #CACHE_CONFIG
-
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
@@ -157,5 +156,5 @@ CACHES = {
     }
 }
 
-CACHE_MIDDLEWARE_SECONDS = 600
+CACHE_MIDDLEWARE_SECONDS = 60
 CACHE_MIDDLEWARE_KEY_PREFIX = 'devweb'
