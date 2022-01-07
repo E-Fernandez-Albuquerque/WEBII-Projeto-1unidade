@@ -9,11 +9,34 @@
     <a style="cursor: pointer; padding: 0 30px" href="/clientes">Clientes</a>
     <a style="cursor: pointer; padding: 0 30px" href="/oficina">Oficina</a>
 
-    <a href="#" id='lnkSuccess'>API - Success</a>
-    <a href="#" id='lnkError'>API - Error</a>
+
+    <a href="#" id='lnkError'></a>
 </div>
 
-<div>
-    <p id="post">Json Here</p>
+<div style="display: flex; justify-content: center; padding: 20px 0;"><button id="lnkSuccess">Exibir marcas</button></div>
+
+<div style="display: flex; margin-left: 150px;">
+    <div style="display: flex; justify-content: center;">
+        <div id="marcas" style="padding: 0 16px;">
+            <h3 style="font-size: 19px;">Marcas</h3>
+            <input type="text" id="marca" placeholder='Código de marca'>
+            <button id="brands">Pesquisar</button>
+            <p id="data"></p>
+        </div>
+        <div id="modelos" style="padding: 0 16px;">
+            <h3 style="font-size: 19px;">Modelos</h3>
+            <input type="text" id="modelo" placeholder="Codigo de modelo">
+            <button id="models">Pesquisar</button>
+            <p id="model"></p>
+        </div>
+        <div id="ano" style="padding: 0 16px;">
+            <h3 style="font-size: 19px;">Ano de fabricação</h3>
+            <input type="text" id="ano_code" placeholder="Código de ano">
+            <button id="year">Obter valor</button>
+            <p id="ano"></p>
+        </div>
+
+    </div>
+
 </div>
 {% endblock %}
