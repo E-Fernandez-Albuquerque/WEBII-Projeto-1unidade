@@ -46,8 +46,7 @@ INSTALLED_APPS = [
     'colaboradores.apps.ColaboradoresConfig',
     'clientes.apps.ClientesConfig',
     'oficina.apps.OficinaConfig',
-    'werkzeug_debugger_runserver', 
-    'django.contrib.staticfiles'
+    'werkzeug_debugger_runserver',
 ]
 
 MIDDLEWARE = [
